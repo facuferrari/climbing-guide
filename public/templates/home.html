@@ -1,0 +1,57 @@
+<nav class="top-bar p3" data-topbar>
+	<ul class="title-area mAuto">
+		<li class="name">
+			<h1><a href="#">Climbing Guide</a></h1>
+		</li>
+	</ul>
+
+	<section class="top-bar-section">
+		<ul class="right">
+			<li class="has-dropdown">
+				<a href="#">Climbing Style</a>
+				<ul class="dropdown">
+					<li ng-repeat="style in climbingStyles"><a href="#">{{ style.name }}</a></li>
+				</ul>
+			</li>
+			<li class="has-form">
+				<div class="row collapse">
+					<div class="large-8 small-9 columns">
+						<input type="search" placeholder="Find Stuff" ng-model="q">
+					</div>
+					<div class="large-4 small-3 columns">
+						<a href="#" class="alert button expand">Search</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+</nav>
+
+
+
+<ul class="small-block-grid-1 medium-block-grid-5 noMargin p3-1">
+
+	<li class="box">
+		<ul class="innerBox sideMenu">
+			<li ng-repeat="style in climbingStyles"><a href="#">{{ style.name }}</a></li>
+		</ul>
+	</li>
+
+	<li class="box" ng-repeat="sector in sectors | filter:q">
+		<div class="innerBox">
+			<img src="{{ sector.img }}"
+				 alt="{{ sector.name }}"
+				 class="img">
+			</img>
+
+			<div class="desc">
+				<span>{{ sector.desc }}</span>
+			</div>
+
+			<div class="info">
+				<span class="sectorName">{{ sector.name }}</span>
+				<span class="sectorStyle">{{ sector.style }}</span>
+			</div>
+		</div>
+	</li>
+</ul>
