@@ -24,5 +24,6 @@
 
 <script src="js/app.js"></script>
 <script src="js/directives/gmap-directive.js"></script>
+<script src="js/directives/sideMenu-directive.js"></script>
 
 </html>

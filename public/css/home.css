@@ -91,3 +91,42 @@ body {
 	height: 100%;
 	width: 100%;
 }
+
+.box {
+	position: absolute;
+	top: 50px;
+	left: 30px;
+
+	background: white;
+	
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, .2);
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+
+.box ul li {
+	list-style: none;
+
+	padding: 10px;
+
+	border-bottom: 1px solid rgba(0, 0, 0, .3);
+	border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.box ul li a {
+	color: rgba(0 ,0 ,0, .6);
+	font-weight: bold;
+	font-size: .8em;
+}
+
+.box ul li a:hover {
+	color: rgba(0, 0, 0, 1);
+}
+
+.box li:first-child {
+	border-top: none;
+}
+
+.box li:last-child {
+	border-bottom: none;
+}
