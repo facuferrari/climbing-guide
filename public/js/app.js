@@ -39,7 +39,8 @@
 				cords: {
 					lat: -54.7972,
 					lng: -68.2052
-				}
+				},
+				sectorId: 1
 			},
 			{
 				name: 'Piedra Barco',
@@ -49,7 +50,8 @@
 				cords: {
 					lat: -54.7303,
 					lng: -67.9316
-				}
+				},
+				sectorId: 2
 			},
 			{
 				name: 'Tres bolas',
@@ -59,7 +61,8 @@
 				cords: {
 					lat: -54.7442,
 					lng: -68.1922
-				}
+				},
+				sectorId: 3
 			},
 		];
 
