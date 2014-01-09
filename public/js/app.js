@@ -35,31 +35,31 @@
 				name: 'La mosca',
 				img: 'img/depo/la_mosca_min.jpg',
 				style: 'Sport Climbing',
-				desc: 'Sector de escalada cercano a la ciudad con rutas de excelente calidad.'
+				desc: 'Sector de escalada cercano a la ciudad con rutas de excelente calidad.',
+				cords: {
+					lat: -54.7972,
+					lng: -68.2052
+				}
 			},
 			{
 				name: 'Piedra Barco',
 				img: 'img/depo/piedra_barco_min.jpg',
 				style: 'Sport Climbing',
-				desc: 'Excelente sector de boulder. Cuenta con problemas desde V4 a V9 y varios proyectos sin encadenar'
-			},
-			{
-				name: 'Olum',
-				img: 'img/depo/olum_min.jpg',
-				style: 'Sport Climbing',
-				desc: 'Aunque algo más lejos que el resto este sector cuenta con vías de excelente calidad con grados que van del 5+ al 7C+'
+				desc: 'Excelente sector de boulder. Cuenta con problemas desde V4 a V9 y varios proyectos sin encadenar',
+				cords: {
+					lat: -54.7303,
+					lng: -67.9316
+				}
 			},
 			{
 				name: 'Tres bolas',
 				img: 'img/depo/la_mosca_min.jpg',
 				style: 'Sport Climbing',
-				desc: ''
-			},
-			{
-				name: 'Ensenada',
-				img: 'img/depo/la_mosca_min.jpg',
-				style: 'Sport Climbing',
-				desc: ''
+				desc: '',
+				cords: {
+					lat: -54.7442,
+					lng: -68.1922
+				}
 			},
 		];
 
