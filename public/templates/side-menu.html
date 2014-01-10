@@ -1,5 +1,5 @@
 <div id="side-menu" class="box large-2">
 	<ul>
-		<li ng-repeat="sector in sectors"><a href="#">{{ sector.name }}</a></li>
+		<li ng-repeat="sector in sectors"><a href="#" ng-click="panToSector(sector.sectorId)">{{ sector.name }}</a></li>
 	</ul>
 </div>

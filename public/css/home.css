@@ -98,7 +98,7 @@ body {
 	left: 30px;
 
 	background: white;
-	
+
 	border-radius: 5px;
 	border: 1px solid rgba(0, 0, 0, .2);
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
@@ -129,4 +129,8 @@ body {
 
 .box li:last-child {
 	border-bottom: none;
+}
+
+#side-menu {
+	z-index: 100;
 }

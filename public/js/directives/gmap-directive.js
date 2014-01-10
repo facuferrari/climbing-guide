@@ -4,48 +4,42 @@
 	app.directives.directive('gmap', function () {
 
 		function Controller ($scope) {
+			var markers = [];
 
 			var init = function () {
 				$scope.map.MapInstance = new google.maps.Map(document.getElementById('map'), $scope.map.Options);
 				angular.forEach($scope.sectors, function (sector) {
-					drawMarkers(sector.cords);
+					_makeMarkers(sector.cords, sector.sectorId);
 				});
+				_drawMarkers();
+
 			};
 
-			var drawMarkers = function (cords) {
-				/*var _infoWindowContent =
-					'<div id="infoBox">' +
-					'<h1 class="infoWindowHeading">'+ 'hola' + '</h1>'+
-					'<p>'+  'test' +'</p>' +
-					'</div>';
-
-				var _infoBox = new InfoBox({
-					content: _infoWindowContent,
-					disableAutoPan: false,
-
-					maxWiwdth: 150,
-					pixelOffset: new google.maps.Size(-140, 0),
-					zIndex: null,
-					boxStyle: {
-						width: '280px',
-						height: '200px'
-					},
-					closeBoxMargin: '12px 4px 2px 2px',
-					closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif",
-					infoBoxClearance: new google.maps.Size(1, 1)
-				});*/
-
+			var _makeMarkers = function (cords, markerId) {
 				var _marker = new google.maps.Marker({
 					position: new google.maps.LatLng(cords.lat, cords.lng),
 					map: $scope.map.MapInstance,
-				})
-				.setMap($scope.map.MapInstance);
+					id: markerId
+				});
+				markers.push(_marker);
 
 			};
 
+			var _drawMarkers = function () {
+				angular.forEach($scope.markers, function (marker) {
+					marker.setMap($scope.map.MapInstance);
+				});
+			};
+
+			var panTo = function (markerId) {
+				$scope.map.MapInstance.panTo(markers[markerId].getPosition());
+				$scope.map.MapInstance.setZoom(12);
+			};
+
 			return {
-				init: init
-			}
+				init: init,
+				panTo: panTo
+			};
 		}
 
 		function LinkFn (scope, iElement, iAttrs, Ctrl) {
@@ -57,7 +51,7 @@
 					mapTypeId       : google.maps.MapTypeId.SATELLITE
 				},
 				MapInstance: null
-			}
+			};
 
 			Ctrl.init();
 		}
@@ -71,8 +65,7 @@
 			controller: Controller,
 			link: LinkFn,
 			restrict: 'E',
-			template: '<div id="map"></div>',
-			replace: true
+			templateUrl: 'templates/gmap.html'
 		};
 	});
 })();
