@@ -33,7 +33,7 @@
 
 			var panTo = function (markerId) {
 				$scope.map.MapInstance.panTo(markers[markerId].getPosition());
-				$scope.map.MapInstance.setZoom(12);
+				$scope.map.MapInstance.setZoom(13);
 			};
 
 			return {
