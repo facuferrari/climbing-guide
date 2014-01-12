@@ -4,39 +4,42 @@
 	app.directives.directive('gmap', function () {
 
 		function Controller ($scope) {
-			$scope.markers = [];
+			var markers = [];
 
 			var init = function () {
 				$scope.map.MapInstance = new google.maps.Map(document.getElementById('map'), $scope.map.Options);
 				angular.forEach($scope.sectors, function (sector) {
-					drawMarkers(sector.cords, sector.id);
+					_makeMarkers(sector.cords, sector.sectorId);
 				});
+				_drawMarkers();
 
 			};
 
-			var panToMarker = function (markerId) {
-				angular.forEach($scope.markers, function(marker) {
-					if (marker.id === markerId) {
-						$scope.map.MapInstance.panTo(marker.getPosition());
-					};
-				})
-			}
-
-			var drawMarkers = function (cords, id) {
+			var _makeMarkers = function (cords, markerId) {
 				var _marker = new google.maps.Marker({
 					position: new google.maps.LatLng(cords.lat, cords.lng),
 					map: $scope.map.MapInstance,
-					id: id
+					id: markerId
 				});
+				markers.push(_marker);
 
-				$scope.markers.push(_marker);
+			};
 
+			var _drawMarkers = function () {
+				angular.forEach($scope.markers, function (marker) {
+					marker.setMap($scope.map.MapInstance);
+				});
+			};
+
+			var panTo = function (markerId) {
+				$scope.map.MapInstance.panTo(markers[markerId].getPosition());
+				$scope.map.MapInstance.setZoom(12);
 			};
 
 			return {
 				init: init,
-				panToMarker: panToMarker
-			}
+				panTo: panTo
+			};
 		}
 
 		function LinkFn (scope, iElement, iAttrs, Ctrl) {
@@ -48,7 +51,7 @@
 					mapTypeId       : google.maps.MapTypeId.SATELLITE
 				},
 				MapInstance: null
-			}
+			};
 
 			Ctrl.init();
 		}
@@ -62,8 +65,7 @@
 			controller: Controller,
 			link: LinkFn,
 			restrict: 'E',
-			template: '<div id="map"></div>',
-			replace: true
+			templateUrl: 'templates/gmap.html'
 		};
 	});
 })();

@@ -40,7 +40,7 @@
 					lat: -54.7972,
 					lng: -68.2052
 				},
-				sectorId: 1
+				sectorId: 0
 			},
 			{
 				name: 'Piedra Barco',
@@ -51,7 +51,7 @@
 					lat: -54.7303,
 					lng: -67.9316
 				},
-				sectorId: 2
+				sectorId: 1
 			},
 			{
 				name: 'Tres bolas',
@@ -62,7 +62,7 @@
 					lat: -54.7442,
 					lng: -68.1922
 				},
-				sectorId: 3
+				sectorId: 2s
 			},
 		];
 
