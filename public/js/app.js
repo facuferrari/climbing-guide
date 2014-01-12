@@ -62,7 +62,7 @@
 					lat: -54.7442,
 					lng: -68.1922
 				},
-				sectorId: 2s
+				sectorId: 2
 			},
 		];
 
