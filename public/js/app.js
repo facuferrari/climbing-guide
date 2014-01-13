@@ -32,10 +32,10 @@
 	app.controllers.controller('mainCtrl', function ($scope) {
 		$scope.sectors = [
 			{
-				name: 'La mosca',
+				name: 'La Mosca Loca',
 				img: 'img/depo/la_mosca_min.jpg',
 				style: 'Sport Climbing',
-				desc: 'Sector de escalada cercano a la ciudad con rutas de excelente calidad.',
+				desc: 'Sector de escalada cercano a la ciudad con rutas de excelente calidad.Sector de escalada cercano a la ciudad con rutas de excelente calidad.',
 				cords: {
 					lat: -54.7972,
 					lng: -68.2052
@@ -57,7 +57,7 @@
 				name: 'Tres bolas',
 				img: 'img/depo/la_mosca_min.jpg',
 				style: 'Sport Climbing',
-				desc: '',
+				desc: 'Pequeño sector a 5 minutos de la ruta',
 				cords: {
 					lat: -54.7442,
 					lng: -68.1922

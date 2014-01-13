@@ -20,7 +20,7 @@
 <script src="components/angular-route/angular-route.min.js"></script>
 
 <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather&sensor=false&language=en"></script>
-<!-- <script src="app/vendor/infobox.js"></script> -->
+<script src="components/infobox.js"></script>
 
 <script src="js/app.js"></script>
 <script src="js/directives/gmap-directive.js"></script>
