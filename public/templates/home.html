@@ -1,32 +1,3 @@
-<nav class="top-bar p3" data-topbar>
-	<ul class="title-area mAuto">
-		<li class="name">
-			<h1><a href="#">Climbing Guide</a></h1>
-		</li>
-	</ul>
-
-	<section class="top-bar-section">
-		<ul class="right">
-			<li class="has-dropdown">
-				<a href="#">Climbing Style</a>
-				<ul class="dropdown">
-					<li ng-repeat="style in climbingStyles"><a href="#">{{ style.name }}</a></li>
-				</ul>
-			</li>
-			<li class="has-form">
-				<div class="row collapse">
-					<div class="large-8 small-9 columns">
-						<input type="search" placeholder="Find Stuff" ng-model="q">
-					</div>
-					<div class="large-4 small-3 columns">
-						<a href="#" class="alert button expand">Search</a>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</section>
-</nav>
-
 <gmap lat="-54.77336558"
 	  lng="-68.203125"
 	  sectors="sectors">

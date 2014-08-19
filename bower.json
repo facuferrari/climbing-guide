@@ -18,7 +18,7 @@
   "dependencies": {
     "angular": "latest",
     "angular-route": "latest",
-    " "
+    "underscore": "~1.6.0",
+    "angular-google-maps": "~1.2.0"
   }
-
 }

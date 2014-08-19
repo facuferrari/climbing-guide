@@ -134,3 +134,27 @@ body {
 #side-menu {
 	z-index: 100;
 }
+
+.row {
+	max-width: none;
+}
+
+.angular-google-map-container {
+	height: 93.1%;
+	width: 100%;
+}
+
+.map-info {
+	border: 1px solid rgba(0, 0, 0, .3);
+	border-radius: 5px;
+	padding: 1.5%;
+	margin-top: 5%;
+	background-color: rgba(255, 255, 255, .9);
+	position: absolute;
+	z-index: 100;
+}
+
+h1 {
+	font-size: 1.6rem;
+	line-height: 1.4;
+}

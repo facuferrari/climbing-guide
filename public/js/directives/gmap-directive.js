@@ -57,7 +57,7 @@
 
 				var infoBoxContent =
 					'<div id="infoBox">' +
-					'<h1 class="infoWindowHeading"><a href="#" ng-click="scope.openModal()">'+ _heading + '</a></h1>'+
+					'<h1 class="infoWindowHeading"><a href="#" onClick="scope.openModal()">'+ _heading + '</a></h1>'+
 					'<p>'+ _desc +'</p>' +
 					'</div>';
 
@@ -101,7 +101,7 @@
 			};
 
 			scope.openModal = function () {
-				/*event.preventDefault();*/
+				event.preventDefault();
 				$('#myModal').foundation('reveal', 'open');
 			}
 

@@ -77,6 +77,7 @@
 function InfoBox(opt_opts) {
 
   opt_opts = opt_opts || {};
+  scope = angular.element($('#map')).scope();
 
   google.maps.OverlayView.apply(this, arguments);
 
@@ -175,8 +176,6 @@ InfoBox.prototype.createInfoBoxDiv_ = function () {
       this.div_.innerHTML = this.getCloseBoxImg_();
       this.div_.appendChild(this.content_);
     }
-    /*
-    */
 
     // Add the InfoBox DIV to the DOM
     this.getPanes()[this.pane_].appendChild(this.div_);
