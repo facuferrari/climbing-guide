@@ -60,7 +60,10 @@
 <script src='components/angular-google-maps/dist/angular-google-maps.min.js'></script>
 
 <script src="js/app.js"></script>
+<script src="js/controllers/mainCtrl.js"></script>
+<script src="js/controllers/newSectorCtrl.js"></script>
 <script src="js/directives/gmap-directive.js"></script>
 <script src="js/directives/sideMenu-directive.js"></script>
+<script src="js/services/facebookService.js"></script>
 
 </html>
