@@ -49,7 +49,7 @@
 <script src="components/foundation/foundation.dropdown.js"></script>
 
 <script src="components/angular/angular.js"></script>
-<script src="components/angular-route/angular-route.min.js"></script>
+<script src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="components/underscore/underscore.js"></script>
 
 <!-- <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather&sensor=false&language=en"></script>
