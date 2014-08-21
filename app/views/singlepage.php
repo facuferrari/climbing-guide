@@ -10,25 +10,17 @@
 
 <body ng-controller="mainCtrl">
 
-	<nav class="top-bar p3" data-topbar>
+	<nav class="top-bar p3">
 		<ul class="title-area mAuto">
 			<li class="name">
-				<h1><a href="#">Climbing Guide</a></h1>
+				<h1><a ui-sref="home">Climbing Guide</a></h1>
 			</li>
 		</ul>
 
 		<section class="top-bar-section">
 			<ul class="right">
-				<!-- Select the style filter for the markers to be shown -->
-				<!-- <li class="has-dropdown">
-					<a href="#">Climbing Style</a>
-					<ul class="dropdown">
-						<li ng-repeat="style in climbingStyles"><a href="#">{{ style.name }}</a></li>
-					</ul>
-				</li> -->
-
-				<li>
-					<a href="#/new-sector">+ Add new sector!</a>
+				<li ng-hide="$state.current.name === 'new-sector'">
+					<a ui-sref="new-sector">+ Add new sector!</a>
 				</li>
 
 				<li ng-switch="loggedIn">
@@ -40,7 +32,7 @@
 		</section>
 	</nav>
 
-	<div ng-view></div>
+	<div ui-view></div>
 </body>
 
 <script src="components/jquery.js"></script>
@@ -49,7 +41,7 @@
 <script src="components/foundation/foundation.dropdown.js"></script>
 
 <script src="components/angular/angular.js"></script>
-<script src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="components/underscore/underscore.js"></script>
 
 <!-- <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather&sensor=false&language=en"></script>
@@ -60,8 +52,10 @@
 <script src='components/angular-google-maps/dist/angular-google-maps.min.js'></script>
 
 <script src="js/app.js"></script>
+
 <script src="js/controllers/mainCtrl.js"></script>
 <script src="js/controllers/newSectorCtrl.js"></script>
+
 <script src="js/directives/gmap-directive.js"></script>
 <script src="js/directives/sideMenu-directive.js"></script>
 <script src="js/services/facebookService.js"></script>

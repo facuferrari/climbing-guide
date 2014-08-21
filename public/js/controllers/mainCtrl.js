@@ -1,4 +1,4 @@
-app.controllers.controller('mainCtrl', function ($scope, Facebook, $rootScope) {
+app.controllers.controller('mainCtrl', function ($scope, Facebook, $rootScope, $state) {
 
 		$scope.sectors = [
 			{

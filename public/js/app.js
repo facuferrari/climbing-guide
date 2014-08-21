@@ -4,7 +4,7 @@
 	window.app = window.app || {};
 
 	app = angular.module('app', [
-		'ngRoute',
+		'ui.router',
 		'controllers',
 		'directives',
 		'services',
@@ -15,24 +15,27 @@
 	app.directives  = angular.module('directives', []);
 	app.services    = angular.module('services', []);
 
-	app.config(function ($routeProvider) {
-		$routeProvider.when('/', {
-			templateUrl: 'templates/home.html',
-			controller : 'mainCtrl'
-		});
+	app.config(function ($stateProvider, $urlRouterProvider) {
+		$urlRouterProvider.otherwise('/');
 
-		$routeProvider.when('/new-sector', {
-			templateUrl: 'templates/new-sector.html',
-			controller : 'newSectorCtrl'
-		});
+		$stateProvider
+			.state ('home', {
+				url: '/home',
+				templateUrl: '../templates/home.html',
+				controller: 'mainCtrl'
+			})
 
-		$routeProvider.otherwise({redirectTo: '/'});
+			.state ('new-sector', {
+				url: '/new-sector',
+				templateUrl: 'templates/new-sector.html',
+				controller: 'newSectorCtrl'
+			});
+
 	});
 
 
-	app.run(function ($rootScope, $location, Facebook, $window) {
-		var routesThatRequiereAuth = ["/"];
-
+	app.run(function ($rootScope, Facebook, $window, $state) {
+		$rootScope.$state = $state;
 		$rootScope.currentUser = null;
 		$rootScope.loggedIn = false;
 
@@ -71,6 +74,8 @@
 	        js.src = "//connect.facebook.net/en_US/all.js";
 	        ref.parentNode.insertBefore(js, ref);
 	    }(document));
+
+	    $state.transitionTo('home');
 
 	});
 

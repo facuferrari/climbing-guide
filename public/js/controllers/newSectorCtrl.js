@@ -1,4 +1,5 @@
-app.controllers.controller('newSectorCtrl', function ($scope, $log) {
+app.controllers.controller('newSectorCtrl', function ($scope, $rootScope) {
+
 		$scope.form = {
 			coords: {
 				latitude: -54.77336558,
