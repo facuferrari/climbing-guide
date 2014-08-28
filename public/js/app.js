@@ -29,6 +29,16 @@
 				url: '/new-sector',
 				templateUrl: 'templates/new-sector.html',
 				controller: 'newSectorCtrl'
+			})
+
+			.state ('new-sector.location', {
+				url: '/location',
+				templateUrl: 'templates/new-sector.partials/new-sector.location.html'
+			})
+
+			.state ('new-sector.info', {
+				url: '/info',
+				templateUrl: 'templates/new-sector.partials/new-sector.info.html'
 			});
 
 	});

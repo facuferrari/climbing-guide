@@ -1,33 +1,6 @@
 	<div class="row">
 
-		<div class="map-info small-4 small-offset-7 columns" ng-switch="stage">
-			<div ng-switch-when="1">
-				<h1>Ubicación</h1>
-				<h5>Arrastre el marcador hacía la ubicación del sector</h5 class="subheader">
-				<hr>
-
-				<div class="row collapse">
-					<div class="small-3 large-2 columns">
-						<span class="prefix">lat</span>
-					</div>
-					<div class="small-9 large-10 columns">
-						<input type="text" placeholder="{{form.coords.latitude}}">
-					</div>
-				</div>
-
-				<div class="row collapse">
-					<div class="small-3 large-2 columns">
-						<span class="prefix">lng</span>
-					</div>
-					<div class="small-9 large-10 columns">
-						<input type="text" placeholder="{{form.coords.longitude}}">
-					</div>
-				</div>
-
-				<a href="#" class="button radius small right bottom" ng-click="changeStage()">Próximo paso ></a>
-			</div>
-			<div ng-switch="2"></div>
-		</div>
+		<div class="map-info small-4 small-offset-7 columns" ui-view></div>
 
 		<google-map
 			center="map.center"

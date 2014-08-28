@@ -158,3 +158,9 @@ h1 {
 	font-size: 1.6rem;
 	line-height: 1.4;
 }
+
+
+.desc {
+	height: 150px;
+	padding: 5px;
+}

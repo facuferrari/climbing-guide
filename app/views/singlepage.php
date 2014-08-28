@@ -19,7 +19,7 @@
 
 		<section class="top-bar-section">
 			<ul class="right">
-				<li ng-hide="$state.current.name === 'new-sector'">
+				<li ng-hide="$state.includes('new-sector')">
 					<a ui-sref="new-sector">+ Add new sector!</a>
 				</li>
 

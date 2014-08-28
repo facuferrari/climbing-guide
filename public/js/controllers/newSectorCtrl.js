@@ -1,11 +1,14 @@
-app.controllers.controller('newSectorCtrl', function ($scope, $rootScope) {
+app.controllers.controller('newSectorCtrl', function ($scope, $rootScope, $state) {
+		$state.transitionTo('new-sector.location');
 
 		$scope.form = {
 			coords: {
 				latitude: -54.77336558,
 				longitude: -68.203125
-			}
-		}
+			},
+			info: {}
+		};
+
 		$scope.map = {
 			center: {
 				latitude: -54.77336558,
@@ -36,10 +39,4 @@ app.controllers.controller('newSectorCtrl', function ($scope, $rootScope) {
 				}
 			}
 		}
-		$scope.stage = 1;
-
-		$scope.changeStage = function () {
-			event.preventDefault();
-			$scope.stage = 2;
-		};
 	});
