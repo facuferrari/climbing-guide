@@ -1,0 +1,48 @@
+<div>
+    <h1>Vías!</h1>
+    <h6 class="subheader">Danos una lista de las vías que hay en el sector!</h5>
+    <hr>
+
+    <div ng-repeat="route in form.routes" class ="row">
+        <div class="small-9 columns">
+            <label for="name">Nombre</label>
+            <input  type="text"
+                    name="name"
+                    placeholder="{{ route.name }}"
+                    ng-model="route.name"
+               />
+        </div>
+        
+        
+        <div class="small-3 columns">            
+            <label for="grade">Grado</label>
+            <select name="grade">
+                <option value="5">5</option>
+                <option value="6a">6a</option>
+                <option value="6a+">6a+</option>
+                <option value="6b">6b</option>
+                <option value="6b+">6b+</option>
+                <option value="6c">6c</option>
+                <option value="6c+">6c+</option>
+                <option value="7a">7a</option>
+                <option value="7a+">7a+</option>
+                <option value="7b">7b</option>
+                <option value="7b+">7b+</option>
+                <option value="7c">7c</option>
+                <option value="7c+">7c+</option>
+                <option value="8a">8a</option>
+                <option value="8a+">8a+</option>
+                <option value="8b">8b</option>
+                <option value="8b+">8b+</option>
+                <option value="8c">8c</option>
+                <option value="8c+">8c+</option>
+                <option value="9a">9a</option>
+                <option value="9a+">9a+</option>
+            </select>
+        </div>
+
+    </div>
+
+    <a class="right" ng-click="addRoute()">+ Vía!</a>
+
+</div>

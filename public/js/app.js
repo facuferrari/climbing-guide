@@ -39,6 +39,11 @@
 			.state ('new-sector.info', {
 				url: '/info',
 				templateUrl: 'templates/new-sector.partials/new-sector.info.html'
+			})
+
+			.state ('new-sector.routes', {
+				url: '/routes',
+				templateUrl: 'templates/new-sector.partials/new-sector.routes.html'
 			});
 
 	});

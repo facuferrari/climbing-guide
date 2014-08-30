@@ -1,4 +1,4 @@
-app.controllers.controller('newSectorCtrl', function ($scope, $rootScope, $state) {
+app.controllers.controller('newSectorCtrl', function ($scope, $rootScope, $state, $timeout) {
 		$state.transitionTo('new-sector.location');
 
 		$scope.form = {
@@ -6,7 +6,26 @@ app.controllers.controller('newSectorCtrl', function ($scope, $rootScope, $state
 				latitude: -54.77336558,
 				longitude: -68.203125
 			},
-			info: {}
+			info: {
+				name: "",
+				desc: ""
+			},
+			routes: [
+				{ 
+					name: "Nombre...",
+					grade: "",
+					ranking: ""
+				}
+			]
+		};
+
+		$scope.addRoute = function () {
+			console.log('test');
+			$scope.form.routes.push({
+				name: "Nombre...",
+				grade: "",
+				ranking: ""
+			});
 		};
 
 		$scope.map = {
@@ -38,5 +57,12 @@ app.controllers.controller('newSectorCtrl', function ($scope, $rootScope, $state
 					});
 				}
 			}
-		}
+		};
+
+
+		// Blocking the marker!
+		$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+			// $scope.marker.options.draggable = false;
+			console.log($scope.form);
+		});
 	});

@@ -4,12 +4,12 @@
 	<hr>
 
 	<label>Nombre
-		<input type="text" placeholder="Ingrese el nombre del sector..."/>
+		<input type="text" placeholder="Ingrese el nombre del sector..." ng-model="form.info.name"/>
 	</label>
 
 	<label>Descripción
-		<textarea class="desc" placeholder="Ingrese una descripción del sector..."></textarea>
+		<textarea class="desc" placeholder="Ingrese una descripción del sector..." ng-model="form.info.desc"></textarea>
 	</label>
 
-	<a ui-sref="new-sector.info" class="button radius small right bottom">Próximo paso ></a>
+	<a ui-sref="new-sector.routes" class="button radius small right bottom">Próximo paso ></a>
 </div>
